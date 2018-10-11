@@ -19,18 +19,33 @@ class Item:
     def __repr__(self):
         return 'Item({!r})'.format(self.name)
 
-q=PriorityQueue()
-q.push(Item('foo'), 1)
-q.push(Item('bar'), 5)
-q.push(Item('spam'),4)
-q.push(Item('gork'),1)
-print(q.pop())
-# Item('bar')
-print(q.pop())
-# Item('spam')
-print(q.pop())
-# Item('foo')
-print(q.pop())
-# Item('gork')
+# q=PriorityQueue()
+# q.push(Item('foo'), 1)
+# q.push(Item('bar'), 5)
+# q.push(Item('spam'),4)
+# q.push(Item('gork'),1)
+# print(q.pop())
+# # Item('bar')
+# print(q.pop())
+# # Item('spam')
+# print(q.pop())
+# # Item('foo')
+# print(q.pop())
+# # Item('gork')
+#
+# print(q.pop())
 
-print(q.pop())
+
+
+'''verification'''
+'''只使用二元组（优先级，item） only diff priority'''
+a=(1,Item('xxx'))
+b=(2,Item('xdsd'))
+print(a<b) #True
+# c=(1,Item('ZZZZZ'))
+# print(a<c)#error!
+
+'''(priority,index,item)''''
+x=(1,0,Item('q'))
+y=(1,1,Item('z'))
+print(x<y)
