@@ -1,5 +1,6 @@
 from  collections import deque
 
+##fgfgfgg
 def search(lines,pattern,history=5):
     previous_lines= deque(maxlen=history)
     for line in lines:
